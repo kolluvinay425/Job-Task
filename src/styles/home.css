@@ -1,4 +1,4 @@
-#bg-gradient {
+.bg-gradient {
   background: rgb(2, 0, 36);
   background: linear-gradient(
     90deg,
@@ -6,6 +6,16 @@
     rgba(56, 55, 136, 0.30885857761073177) 35%,
     rgba(0, 212, 255, 1) 100%
   );
+}
+.special_modal .modal-content {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(61, 52, 224) 0%,
+    rgba(56, 55, 136, 0.30885857761073177) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  color: #fff;
 }
 /* @media only screen and (width: 375px) and (height: 667) {
   .gradient-bg {

@@ -21,6 +21,8 @@ function UserModel({ hideModal, show, user }) {
     <div id="bg-gradient">
       <>
         <Modal
+          dialogClassName="modal-90w public-profile-modal-class"
+          className="special_modal"
           show={show}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
@@ -28,7 +30,7 @@ function UserModel({ hideModal, show, user }) {
         >
           <Modal.Header>
             <Modal.Title id="contained-modal-title-vcenter">
-              <span style={{ color: "#454dc0" }}>{user.name}</span> Details
+              <span style={{ color: "#f25591" }}>{user.name}</span> Details
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
