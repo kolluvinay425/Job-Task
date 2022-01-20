@@ -29,17 +29,11 @@
 }
 .table {
   margin: auto;
-  max-width: 100%;
+  max-width: 80%;
   left: 20%;
 }
 body {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgb(61, 52, 224) 0%,
-    rgba(56, 55, 136, 0.30885857761073177) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
+  background-color: #ededf5;
 }
 
 /* #detail-btn {
