@@ -1,12 +1,3 @@
-.bg-gradient {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgb(61, 52, 224) 0%,
-    rgba(56, 55, 136, 0.30885857761073177) 35%,
-    rgba(0, 212, 255, 1) 100%
-  );
-}
 .special_modal .modal-content {
   background: rgb(2, 0, 36);
   background: linear-gradient(
@@ -33,8 +24,9 @@
   max-width: 500px;
   max-height: 80px;
   border-radius: 50px;
-  color: black;
-  border-color: black;
+  color: rgb(245, 241, 241);
+  border-color: rgb(245, 239, 239);
+  background-color: #454dc0;
 }
 .btn:hover {
   background-color: rgba(15, 19, 228, 0.309);
@@ -45,7 +37,7 @@
   left: 20%;
 }
 body {
-  background-color: #ededf5;
+  background-color: #e7e7f1;
 }
 
 /* #detail-btn {
