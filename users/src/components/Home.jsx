@@ -7,13 +7,16 @@ import UserModel from "./UserModel";
 import { fetchUsers } from "../fetches";
 function Home() {
   const [modalShow, setModalShow] = useState(false);
-  const toggleModal = () => {
+  const [users, setUsers] = useState([]);
+  const [activeUser, setActiveUser] = useState([]);
+
+  const toggleModal = (user) => {
+    setActiveUser(user);
     setModalShow(true);
   };
   const hideModal = () => {
     setModalShow(false);
   };
-  const [users, setUsers] = useState([]);
   const usersList = async () => {
     try {
       const data = await fetchUsers();
@@ -22,13 +25,20 @@ function Home() {
       console.log(error);
     }
   };
-
+  const hideUsersList = () => {
+    setUsers([]);
+  };
   return (
     <div className="container gradient-bg">
       <div>
+        <button onClick={hideUsersList} className="btn btn-outline-info">
+          Hide Users
+        </button>
+
         <button onClick={usersList} className="btn btn-outline-info">
           Get Users
         </button>
+
         <br />
       </div>
       <br />
@@ -52,8 +62,11 @@ function Home() {
                   <td>
                     {user.phone}
                     <span>
-                      <button onClick={toggleModal} id="detail-btn">
-                        details
+                      <button
+                        onClick={() => toggleModal(user)}
+                        className="button"
+                      >
+                        <span>Details</span>
                       </button>
                     </span>
                   </td>
@@ -62,7 +75,9 @@ function Home() {
             </tbody>
           </Table>
         </div>
-        {modalShow && <UserModel hideModal={hideModal} show={modalShow} />}
+        {modalShow && (
+          <UserModel hideModal={hideModal} show={modalShow} user={activeUser} />
+        )}
       </div>
     </div>
   );

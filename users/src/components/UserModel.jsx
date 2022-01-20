@@ -1,8 +1,24 @@
 import React from "react";
-import { Modal, Button } from "react-bootstrap";
-function UserModel({ hideModal, show }) {
+import { useState, useEffect } from "react";
+import { Modal } from "react-bootstrap";
+import { fetchCurrentUser } from "../fetches";
+function UserModel({ hideModal, show, user }) {
+  const [userAddress, setUserAddress] = useState({});
+  const [userCompany, setUserCompany] = useState({});
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      const data = await fetchCurrentUser(user.id);
+      setUserAddress(data.address);
+      setUserCompany(data.company);
+    };
+    fetchUserData();
+  }, [user.id]);
+  //   console.log("user Address", userAddress);
+  //   console.log("user Company", userCompany);
+
   return (
-    <div>
+    <div id="bg-gradient">
       <>
         <Modal
           show={show}
@@ -12,19 +28,45 @@ function UserModel({ hideModal, show }) {
         >
           <Modal.Header>
             <Modal.Title id="contained-modal-title-vcenter">
-              Modal heading
+              <span style={{ color: "#454dc0" }}>{user.name}</span> Details
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h4>Centered Modal</h4>
-            <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros.
-            </p>
+            <div className="row">
+              <div className="col-md-8">
+                <h4>Company</h4>
+                <p>
+                  Name: <b>{userCompany.name}</b>
+                </p>
+                <p>
+                  Website: <b>{user.website}</b>
+                </p>
+                <p>
+                  Role: <b>{userCompany.catchPhrase}</b>
+                </p>
+                <p></p>
+              </div>
+              <div className="col-md-4">
+                <h4>Address</h4>
+                <p>
+                  City: <b>{userAddress.city}</b>
+                </p>
+                <p>
+                  Street: <b>{userAddress.street}</b>
+                </p>
+                <p>
+                  House No: <b>{userAddress.suite}</b>
+                </p>
+                <p>
+                  Zip Code: <b>{userAddress.zipcode}</b>
+                </p>
+              </div>
+            </div>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={hideModal}>Close</Button>
+            <button onClick={hideModal} className="button">
+              <span>Close</span>
+            </button>
           </Modal.Footer>
         </Modal>
       </>
