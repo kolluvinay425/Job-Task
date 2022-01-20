@@ -16,6 +16,8 @@
     rgba(0, 212, 255, 1) 100%
   );
   color: #fff;
+  border-radius: 15px;
+  border-color: whitesmoke;
 }
 /* @media only screen and (width: 375px) and (height: 667) {
   .gradient-bg {
