@@ -31,11 +31,11 @@ function Home() {
   return (
     <div className="container gradient-bg">
       <div>
-        <button onClick={hideUsersList} className="btn btn-outline-info">
+        <button onClick={hideUsersList} className="btn ">
           Hide Users
         </button>
 
-        <button onClick={usersList} className="btn btn-outline-info">
+        <button onClick={usersList} className="btn ">
           Get Users
         </button>
 
