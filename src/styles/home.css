@@ -27,9 +27,9 @@
   color: rgb(245, 241, 241);
   border-color: rgb(245, 239, 239);
   background-color: #454dc0;
-  transition: 0.5s;
+  transition: 1s;
   animation-name: move;
-  animation-duration: 3s;
+  animation-duration: 1s;
   /* animation-fill-mode: forwards; */
 }
 @keyframes move {
@@ -42,7 +42,7 @@
 }
 .btn:hover {
   background: rgba(248, 248, 250, 0.309);
-  transform: rotate(360deg);
+  /* transform: rotate(360deg); */
   width: 200px;
 }
 .table {
@@ -50,7 +50,7 @@
   max-width: 80%;
   left: 20%;
   transition: 1s;
-  transform: rotate(360deg);
+  /* transform: rotate(360deg); */
 }
 body {
   background-color: #e7e7f1;
@@ -78,7 +78,7 @@ body {
   padding: 20px;
   width: 100px;
   height: auto;
-  transition: all 0.5s;
+  transition: all 0.2s;
   cursor: pointer;
   margin: 5px;
   float: right;
