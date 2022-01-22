@@ -28,6 +28,16 @@
   border-color: rgb(245, 239, 239);
   background-color: #454dc0;
   transition: 0.5s;
+  animation-name: move;
+  animation-duration: 3s;
+}
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(400px);
+  }
 }
 .btn:hover {
   background: rgba(248, 248, 250, 0.309);
@@ -37,6 +47,8 @@
   margin: auto;
   max-width: 80%;
   left: 20%;
+  transition: 1s;
+  transform: rotate(360deg);
 }
 body {
   background-color: #e7e7f1;
@@ -70,7 +82,6 @@ body {
 .button:hover {
   background: whitesmoke;
   color: black;
-  box-shadow: tomato;
 }
 .button span {
   cursor: pointer;
