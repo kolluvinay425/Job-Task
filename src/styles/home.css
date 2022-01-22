@@ -14,19 +14,26 @@
   .table {
     color: rgb(89, 31, 197);
     width: 100%;
+    margin: auto;
+  }
+  .table tr,
+  td,
+  th {
+    justify-content: space-between;
   }
   .special_modal .modal-content {
-    width: 80%;
+    max-width: 75%;
     align-items: center;
     position: relative;
     left: 60px;
+  }
+  body {
+    background-color: #e7e7f1;
   }
 }
 
 .btn {
   margin: 5px;
-  /* max-width: 500px;
-  max-height: 80px; */
   border-radius: 50px;
   color: rgb(245, 241, 241);
   border-color: rgb(245, 239, 239);
@@ -51,7 +58,7 @@
 }
 .table {
   margin: auto;
-  max-width: 80%;
+  max-width: 90%;
   left: 20%;
   transition: 1s;
   /* transform: rotate(360deg); */
@@ -61,17 +68,6 @@ body {
   box-sizing: border-box;
   width: 100%;
 }
-
-/* #detail-btn {
-  color: black;
-  border-color: black;
-  border-radius: 50px;
-  float: right;
-  background-color: transparent;
-}
-#detail-btn:hover {
-  background-color: rgba(74, 51, 175, 0.8);
-} */
 .button {
   border-radius: 4px;
   background-color: #454dc0;
