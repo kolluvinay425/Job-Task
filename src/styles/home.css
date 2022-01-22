@@ -67,7 +67,11 @@ body {
   margin: 5px;
   float: right;
 }
-
+.button:hover {
+  background: whitesmoke;
+  color: black;
+  box-shadow: tomato;
+}
 .button span {
   cursor: pointer;
   display: inline-block;
