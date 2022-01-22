@@ -21,8 +21,8 @@
 
 .btn {
   margin: 5px;
-  max-width: 500px;
-  max-height: 80px;
+  /* max-width: 500px;
+  max-height: 80px; */
   border-radius: 50px;
   color: rgb(245, 241, 241);
   border-color: rgb(245, 239, 239);
@@ -30,18 +30,20 @@
   transition: 0.5s;
   animation-name: move;
   animation-duration: 3s;
+  /* animation-fill-mode: forwards; */
 }
 @keyframes move {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(400px);
+    transform: translateX(500px);
   }
 }
 .btn:hover {
   background: rgba(248, 248, 250, 0.309);
   transform: rotate(360deg);
+  width: 200px;
 }
 .table {
   margin: auto;
@@ -52,6 +54,8 @@
 }
 body {
   background-color: #e7e7f1;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 /* #detail-btn {

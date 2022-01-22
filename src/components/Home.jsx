@@ -75,10 +75,10 @@ function Home() {
             </tbody>
           </Table>
         </div>
-        {modalShow && (
-          <UserModel hideModal={hideModal} show={modalShow} user={activeUser} />
-        )}
       </div>
+      {modalShow && (
+        <UserModel hideModal={hideModal} show={modalShow} user={activeUser} />
+      )}
     </div>
   );
 }
