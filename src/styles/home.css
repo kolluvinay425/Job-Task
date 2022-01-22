@@ -27,9 +27,11 @@
   color: rgb(245, 241, 241);
   border-color: rgb(245, 239, 239);
   background-color: #454dc0;
+  transition: 0.5s;
 }
 .btn:hover {
-  background-color: rgba(15, 19, 228, 0.309);
+  background: rgba(248, 248, 250, 0.309);
+  transform: rotate(360deg);
 }
 .table {
   margin: auto;
