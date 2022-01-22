@@ -21,7 +21,6 @@ function UserModel({ hideModal, show, user }) {
     <div id="bg-gradient">
       <>
         <Modal
-          dialogClassName="modal-90w public-profile-modal-class"
           className="special_modal"
           show={show}
           size="lg"

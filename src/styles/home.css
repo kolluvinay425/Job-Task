@@ -10,14 +10,18 @@
   border-radius: 15px;
   border-color: whitesmoke;
 }
-/* @media only screen and (width: 375px) and (height: 667) {
-  .gradient-bg {
-    width: 500px;
+@media screen and (max-width: 480px) {
+  .table {
+    color: rgb(89, 31, 197);
+    width: 100%;
   }
-  .table > tr {
-    font-size: 20px;
+  .special_modal .modal-content {
+    width: 80%;
+    align-items: center;
+    position: relative;
+    left: 60px;
   }
-} */
+}
 
 .btn {
   margin: 5px;
