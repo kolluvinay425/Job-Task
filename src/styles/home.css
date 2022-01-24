@@ -17,35 +17,19 @@ h4 {
   color: #f25591;
 }
 @media screen and (max-width: 667px) {
-  /* .app {
-    width: 200%;
-  } */
-  /* .gradiant-bg {
-    min-width: 100%;
-  } */
-  /* .row {
-    margin-left: 150px;
-  } */
-  .table {
-    color: rgb(89, 31, 197);
-    width: 200%;
-  }
   table p {
     text-align: left;
   }
   table tr {
     font-size: 10px;
   }
-  /* .table tr,
-  td,
-  th {
-    justify-content: space-between;
-  } */
+
   .special_modal .modal-content {
     max-width: 75%;
     align-items: center;
     position: relative;
     left: 60px;
+    font-size: 10px;
   }
   body {
     background-color: #e7e7f1;
