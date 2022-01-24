@@ -43,38 +43,36 @@ function Home() {
       </div>
       <br />
       <div className="row">
-        <div className="col-sm-12 col-md-12 table">
-          <Table striped bordered hover className="">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
+        <Table striped bordered hover className="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.id}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>
+                  {user.phone}
+                  <span>
+                    <button
+                      onClick={() => toggleModal(user)}
+                      className="button"
+                    >
+                      <span>Details</span>
+                    </button>
+                  </span>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {users.map((user) => (
-                <tr key={user.id}>
-                  <td>{user.id}</td>
-                  <td>{user.name}</td>
-                  <td>{user.email}</td>
-                  <td>
-                    {user.phone}
-                    <span>
-                      <button
-                        onClick={() => toggleModal(user)}
-                        className="button"
-                      >
-                        <span>Details</span>
-                      </button>
-                    </span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </Table>
-        </div>
+            ))}
+          </tbody>
+        </Table>
       </div>
       {modalShow && (
         <UserModel hideModal={hideModal} show={modalShow} user={activeUser} />

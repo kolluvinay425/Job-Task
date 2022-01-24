@@ -4,7 +4,7 @@ import "./styles/home.css";
 
 function App() {
   return (
-    <div className="App gradient-bg">
+    <div className="App">
       <br />
       <Home />
     </div>
