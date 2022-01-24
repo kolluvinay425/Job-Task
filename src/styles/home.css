@@ -29,10 +29,6 @@ h4 {
   .table {
     color: rgb(89, 31, 197);
     width: 200%;
-    margin: 0;
-    padding: 0;
-    overflow: none;
-    background-color: coral;
   }
   table p {
     text-align: left;
